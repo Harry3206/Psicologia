@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pacientes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('listar_pacientes') }}">Ver Pacientes</a></li>
+            <li><a href="{{ url_for('agregar_paciente') }}">Agregar Paciente</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <h1>Lista de Pacientes</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Teléfono</th>
+                    <th>Primera Consulta</th>
+                    <th>Notas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí irá el contenido dinámico de la tabla -->
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

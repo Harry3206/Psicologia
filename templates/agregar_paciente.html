@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Paciente</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('listar_pacientes') }}">Ver Pacientes</a></li>
+            <li><a href="{{ url_for('agregar_paciente') }}">Agregar Paciente</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <h1>Agregar Paciente</h1>
+        <form action="{{ url_for('agregar_paciente') }}" method="POST" class="formulario">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_primera_consulta">Fecha de Primera Consulta:</label>
+                <input type="date" id="fecha_primera_consulta" name="fecha_primera_consulta" required>
+            </div>
+            <div class="form-group">
+                <label for="notas">Notas:</label>
+                <textarea id="notas" name="notas" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Agregar Paciente</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

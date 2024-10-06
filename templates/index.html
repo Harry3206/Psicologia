@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('listar_pacientes') }}">Ver Pacientes</a></li>
+            <li><a href="{{ url_for('agregar_paciente') }}">Agregar Paciente</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <h1>Bienvenido al Sistema del Consultorio de Psicología</h1>
+        <p>Este sistema te permite gestionar los pacientes de manera eficiente. Puedes ver la lista de pacientes, agregar nuevos, y administrar sus citas y pagos.</p>
+        <div>
+            <a href="{{ url_for('listar_pacientes') }}"><button>Ver Pacientes</button></a>
+            <a href="{{ url_for('agregar_paciente') }}"><button>Agregar Paciente</button></a>
+        </div>
+    </div>
+
+</body>
+</html>
